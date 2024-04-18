@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Toy Store</title>
+</head>
+<body>
+<h1>Toy Store</h1>
+<ul>
+{% for toy in toys %}
+<li><a href="{{ url_for('product', product_id=toy.id) }}">{{ toy.name }}</a></li>
+{% endfor %}
+</ul>
+</body>
+</html>
+
+
