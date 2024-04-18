@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>{{ toy.name }}</title>
+</head>
+<body>
+<h1>{{ toy.name }}</h1>
+<p>{{ toy.description }}</p>
+<p>{{ toy.price }}</p>
+<img src="{{ toy.image }}" alt="{{ toy.name }}">
+<form action="{{ url_for('add_to_cart') }}" method="POST">
+<input type="hidden" name="toy_id" value="{{ toy.id }}">
+<input type="number" name="quantity" min="1">
+<input type="submit" value="Add to Cart">
+</form>
+</body>
+</html>
+
+
